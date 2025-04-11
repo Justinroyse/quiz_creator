@@ -30,8 +30,17 @@ while True:
         else:
             print("Invalid choice. Please enter a, b, c, or d") 
 
-    #store the question and answer entry as a formatted sting to apppend in the question datas
-
+#store the question and answer entry as a formatted sting to apppend in the question datas
+    question_entry = (
+        f"Question: {question}\n"
+        f"a) {answer_a}\n"
+        f"b) {answer_b}\n"
+        f"c) {answer_c}\n"
+        f"d) {answer_d}\n"
+        f"Correct Answer: {correct_answer}\n"
+        f"{'-'*30}\n"
+    )
+    question_data.append(question_entry)
 
 #Store and write user input into a text file format
 
