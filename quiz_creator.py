@@ -14,7 +14,7 @@ while True:
     main_menu()
     choice = int(input("Choice (1 and 2): "))
 
-    if choice == "1":
+    if choice == 1:
         question = input("\nEnter question: ")
         
         answer_a = input("Enter option a: ")
