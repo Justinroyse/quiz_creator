@@ -22,13 +22,16 @@ while True:
         answer_c = input("Enter option c: ")
         answer_d = input("Enter option d: ")
 
-#initialize another while loop within the first one to properly print check and store correct answer
+#Initialize another while loop within the first one to properly print check and store correct answer
     while True:
         correct_answer = input("Enter the correct answer (a,b,c,d): ").lower()
         if correct_answer in ['a', 'b', 'c', 'd']:
             break
         else:
-            print("Invalid choice. Please enter a, b, c, or d")
+            print("Invalid choice. Please enter a, b, c, or d") 
+
+    #store the question and answer entry as a formatted sting to apppend in the question datas
+
 
 #Store and write user input into a text file format
 
