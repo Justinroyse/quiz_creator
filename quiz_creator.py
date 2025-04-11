@@ -22,6 +22,9 @@ while True:
         answer_c = input("Enter option c: ")
         answer_d = input("Enter option d: ")
 
+#initialize another while loop within the first one to properly print check and store correct answer
+
+
 #Initialize user interface main menu 
 
 #Store and write user input into a text file format
