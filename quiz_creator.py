@@ -7,6 +7,7 @@ def main_menu():
 
 
 #Initialize list to store questions and answers to append in
+question_data = []
 
 #Initialize a while loop to ask for user input until the user choose to exit
 
