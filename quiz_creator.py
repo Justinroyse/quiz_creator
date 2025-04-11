@@ -14,6 +14,14 @@ while True:
     main_menu()
     choice = int(input("Choice (1 and 2): "))
 
+    if choice == "1":
+        question = input("\nEnter question: ")
+        
+        answer_a = input("Enter option a: ")
+        answer_b = input("Enter option b: ")
+        answer_c = input("Enter option c: ")
+        answer_d = input("Enter option d: ")
+
 #Initialize user interface main menu 
 
 #Store and write user input into a text file format
