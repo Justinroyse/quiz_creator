@@ -23,24 +23,26 @@ while True:
         answer_d = input("Enter option d: ")
 
 #Initialize another while loop within the first one to properly print check and store correct answer
-    while True:
-        correct_answer = input("Enter the correct answer (a,b,c,d): ").lower()
-        if correct_answer in ['a', 'b', 'c', 'd']:
-            break
-        else:
-            print("Invalid choice. Please enter a, b, c, or d") 
+        while True:
+            correct_answer = input("Enter the correct answer (a,b,c,d): ").lower()
+            if correct_answer in ['a', 'b', 'c', 'd']:
+                break
+            else:
+                print("Invalid choice. Please enter a, b, c, or d") 
 
 #store the question and answer entry as a formatted sting to apppend in the question datas
-    question_entry = (
-        f"Question: {question}\n"
-        f"a) {answer_a}\n"
-        f"b) {answer_b}\n"
-        f"c) {answer_c}\n"
-        f"d) {answer_d}\n"
-        f"Correct Answer: {correct_answer}\n"
-        f"{'-'*30}\n"
-    )
-    question_data.append(question_entry)
+        question_entry = (
+            f"Question: {question}\n"
+            f"a) {answer_a}\n"
+            f"b) {answer_b}\n"
+            f"c) {answer_c}\n"
+            f"d) {answer_d}\n"
+            f"Correct Answer: {correct_answer}\n"
+            f"{'-'*30}\n"
+        )
+        question_data.append(question_entry)
 
 #Store and write user input into a text file format
+
+
 
