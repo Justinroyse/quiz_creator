@@ -23,7 +23,12 @@ while True:
         answer_d = input("Enter option d: ")
 
 #initialize another while loop within the first one to properly print check and store correct answer
-
+    while True:
+        correct_answer = input("Enter the correct answer (a,b,c,d): ").lower()
+        if correct_answer in ['a', 'b', 'c', 'd']:
+            break
+        else:
+            print("Invalid choice. Please enter a, b, c, or d")
 
 #Initialize user interface main menu 
 
