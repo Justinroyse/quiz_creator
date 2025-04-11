@@ -20,21 +20,23 @@ quiz_started = False
 #Initialize a while loop to ask for user input until the user choose to exit
 while True:
     main_menu(quiz_started)
-    choice = int(input("\nChoice (1 and 2): "))
+    choice = int(input("\nChoice (1 or 2): "))
 
     if choice == 1:
         quiz_started = True
 
-        question = input("\nEnter question: ")
+        print("\n--- Creating a New Question ---")
+        question = input("\nEnter your quiz question:\n>")
         
-        answer_a = input("Enter option a: ")
-        answer_b = input("Enter option b: ")
-        answer_c = input("Enter option c: ")
-        answer_d = input("Enter option d: ")
+        print("\nNow enter the 4 options:")
+        answer_a = input("a) ")
+        answer_b = input("b) ")
+        answer_c = input("c) ")
+        answer_d = input("d) ")
 
 #Initialize another while loop within the first one to properly print check and store correct answer
         while True:
-            correct_answer = input("Enter the correct answer (a,b,c,d): ").lower()
+            correct_answer = input("\nEnter the correct answer (a,b,c,d): ").lower()
             if correct_answer in ['a', 'b', 'c', 'd']:
                 break
             else:
@@ -57,7 +59,8 @@ while True:
         with open("quiz_questions.txt", "w") as file:
             for entry in question_data:
                 file.write(entry)
-        print("All questions saved to (quiz_questions.txt). Exiting Program...")
+        print("\n--- All questions saved to (quiz_questions.txt) ---")
+        print("Exiting program... Goodbye!")
         break
 
     else:
