@@ -1,0 +1,7 @@
+Question: What is the color of banana?
+a) yellow
+b) blue
+c) pink
+d) red
+Correct Answer: a
+------------------------------
