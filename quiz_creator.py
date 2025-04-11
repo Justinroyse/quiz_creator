@@ -30,7 +30,5 @@ while True:
         else:
             print("Invalid choice. Please enter a, b, c, or d")
 
-#Initialize user interface main menu 
-
 #Store and write user input into a text file format
 
