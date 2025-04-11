@@ -43,6 +43,15 @@ while True:
         question_data.append(question_entry)
 
 #Store and write user input into a text file format
+    elif choice == 2:
+        with open("quiz_questions.txt", "w") as file:
+            for entry in question_data:
+                file.write(entry)
+        print("All questions saved to (quiz_questions.txt). Exiting Program...")
+        break
+
+    else:
+        print("Invalid choice. Please select 1 or 2.")
 
 
 
