@@ -1,7 +1,14 @@
-Question: What is the color of banana?
-a) yellow
+Question: What is the meaning of life
+a) death
+b) rain
+c) sun
+d) moon
+Correct Answer: d
+------------------------------
+Question: What is the color of apple
+a) red
 b) blue
-c) pink
-d) red
+c) white
+d) yellow
 Correct Answer: a
 ------------------------------
