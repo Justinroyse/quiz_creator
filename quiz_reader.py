@@ -57,17 +57,20 @@ def quiz_game(questions):
             else:
                 print("⚠️ Invalid choice. Please enter a, b, c, or d.")
 
-#Check if the answer is correct
+# Check if the answer is correct
         if answer == question['correct']:
             print("Correct!")
             score += 1
         else:
             print(f"Wrong! The correct answer was: {question['correct']}) {question['options'][question['correct']]}")
 
-#Ask the user if they want to continue
+# Ask the user if they want to continue
         continuation = input("\nDo you want to continue? (y/n): ").lower()
         if continuation != "y":
             break
 
-
+# Displays the final score if the quiz is over and exits the program
+    print("\n" + "=" * 50)
+    print(f"🏁 Quiz finished! Your final score: {score}/{len(asked_questions)}")
+    print("Thanks for playing!")
 
