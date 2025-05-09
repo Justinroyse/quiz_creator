@@ -31,5 +31,16 @@ def reader(filename):
 
 # Create user defined function for quiz game
 def quiz_game(questions):
-    
+    score = 0
+    asked_questions = []
+
+# Initialize while loop to keep asking for questions until user quits the game
+    while True:
+        remaining = [question for question in questions if question not in asked_questions]
+        if not remaining:
+            print("\n You've answered all available questions!")
+            break
+
+        
+
 
