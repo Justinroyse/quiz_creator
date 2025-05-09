@@ -38,6 +38,15 @@ def reader(filename):
 
     return questions
 
+# Create quiz class and slowly incorporate it in the prototype quiz game function
+class QuizApp:
+    def __init__(self, master, questions):
+        self.master = master
+        self.master.title("Quiz Game")
+        self.questions = random.sample(questions, len(questions))  # Shuffle
+        self.index = 0
+        self.score = 0
+
 # Create user defined function for quiz game
 def quiz_game(questions):
     score = 0
