@@ -46,6 +46,27 @@ class QuizApp:
         self.questions = random.sample(questions, len(questions))  # Shuffle
         self.index = 0
         self.score = 0
+        
+        self.question_label = tk.Label(master, text="", font=('Arial', 14), wraplength=500, justify="left")
+        self.question_label.pack(pady=20)
+
+        self.buttons = {}
+        for key in ['a', 'b', 'c', 'd']:
+            btn = tk.Button(master, text="", width=40, font=('Arial', 12),
+                            command=lambda opt=key: self.check_answer(opt))
+            btn.pack(pady=5)
+            self.buttons[key] = btn
+
+        self.feedback = tk.Label(master, text="", font=('Arial', 12, 'italic'))
+        self.feedback.pack(pady=10)
+
+        self.next_btn = tk.Button(master, text="Next", font=('Arial', 12), command=self.next_question, state="disabled")
+        self.next_btn.pack(pady=10)
+
+        self.score_label = tk.Label(master, text="Score: 0", font=('Arial', 12))
+        self.score_label.pack(pady=5)
+
+        self.show_question()
 
 # Create user defined function for quiz game
 def quiz_game(questions):
