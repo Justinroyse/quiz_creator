@@ -6,6 +6,8 @@ def reader(filename):
     with open(filename, "r") as file:
         content = file.read()
 
+    questions_raw = content.strip().split('-' * 40 + '\n')
+    questions = []
 
 # Create user defined function for quiz game
 
