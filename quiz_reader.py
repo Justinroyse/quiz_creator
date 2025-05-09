@@ -41,6 +41,14 @@ def quiz_game(questions):
             print("\n You've answered all available questions!")
             break
 
-        
+        question = random.choice(remaining)
+        asked_questions.append(question)
+
+        print("\n" + "=" * 50)
+        print(f"Question: {q['question']}")
+        for key in ['a', 'b', 'c', 'd']:
+            print(f"{key}) {q['options'][key]}")
+
+
 
 
