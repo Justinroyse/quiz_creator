@@ -30,4 +30,6 @@ def reader(filename):
     return questions
 
 # Create user defined function for quiz game
+def quiz_game(questions):
+    
 
