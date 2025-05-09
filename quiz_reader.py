@@ -9,5 +9,19 @@ def reader(filename):
     questions_raw = content.strip().split('-' * 40 + '\n')
     questions = []
 
+    for q_raw in questions_raw:
+        lines = q_raw.strip().split('\n')
+        if len(lines) < 6:
+            continue
+
+        question = lines[0].replace("Question: ", " ")
+        a = lines[1].replace("a) ", " ")
+        b = lines[2].replace("b) ", " ")
+        c = lines[3].replace("c) ", " ")
+        d = lines[4].replace("d) ", " ")
+        correct = lines[5].replace("Correct Answer: ", " ").strip()
+
+        
+
 # Create user defined function for quiz game
 
