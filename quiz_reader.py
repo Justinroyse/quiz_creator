@@ -21,7 +21,13 @@ def reader(filename):
         d = lines[4].replace("d) ", " ")
         correct = lines[5].replace("Correct Answer: ", " ").strip()
 
-        
+        questions.append({
+            'question': question,
+            'options': {'a': a, 'b': b, 'c': c, 'd': d},
+            'correct': correct
+        })
+
+    return questions
 
 # Create user defined function for quiz game
 
