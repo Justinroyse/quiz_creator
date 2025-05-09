@@ -13,25 +13,27 @@ def reader(filename):
         messagebox.showerror("File Error", f"(Cannot find {filename}")
         return []
 
-    questions_raw = content.strip().split('-' * 40 + '\n')
+    blocks = content.strip().split("-" * 30 + "\n")
     questions = []
 
-    for q_raw in questions_raw:
-        lines = q_raw.strip().split('\n')
+    for block in blocks:
+        lines = block.strip().split('\n')
         if len(lines) < 6:
             continue
 
-        question = lines[0].replace("Question: ", " ")
-        a = lines[1].replace("a) ", " ")
-        b = lines[2].replace("b) ", " ")
-        c = lines[3].replace("c) ", " ")
-        d = lines[4].replace("d) ", " ")
-        correct = lines[5].replace("Correct Answer: ", " ").strip()
+        question_text = lines[0].replace("Question: ", "")
+        options = {
+            'a': lines[1][3:],
+            'b': lines[2][3:],
+            'c': lines[3][3:],
+            'd': lines[4][3:]
+        }
+        correct = lines[5].replace("Correct Answer: ", "").strip()
 
         questions.append({
-            'question': question,
-            'options': {'a': a, 'b': b, 'c': c, 'd': d},
-            'correct': correct
+            "question": question_text,
+            "options": options,
+            "correct": correct
         })
 
     return questions
