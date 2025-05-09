@@ -6,8 +6,12 @@ import random
 
 # Create user defined function for loading the quiz file
 def reader(filename):
-    with open(filename, "r") as file:
-        content = file.read()
+    try:
+        with open(filename, "r") as file:
+            content = file.read()
+    except FileNotFoundError:
+        messagebox.showerror("File Error", f"(Cannot find {filename}")
+        return []
 
     questions_raw = content.strip().split('-' * 40 + '\n')
     questions = []
