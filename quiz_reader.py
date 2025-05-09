@@ -49,6 +49,14 @@ def quiz_game(questions):
         for key in ['a', 'b', 'c', 'd']:
             print(f"{key}) {question['options'][key]}")
 
+# Acquire user's answer
+        while True:
+            answer = input("Your answer (a, b, c, d): ").lower()
+            if answer in ['a', 'b', 'c', 'd']:
+                break
+            else:
+                print("⚠️ Invalid choice. Please enter a, b, c, or d.")
+
 
 
 
