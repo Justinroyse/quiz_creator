@@ -68,6 +68,20 @@ class QuizApp:
 
         self.show_question()
 
+        self.create_welcome_screen()
+
+    def create_welcome_screen(self):
+        self.clear_window()
+
+        self.welcome_label = tk.Label(self.master, text="Welcome to the Quiz Game!", font=("Arial", 18))
+        self.welcome_label.pack(pady=30)
+
+        self.start_button = tk.Button(self.master, text="Start Quiz", font=("Arial", 14), command=self.start_quiz)
+        self.start_button.pack(pady=10)
+
+        self.quit_button = tk.Button(self.master, text="Quit", font=("Arial", 14), command=self.master.quit)
+        self.quit_button.pack(pady=10)
+
     def show_question(self):
         if self.index >= len(self.questions):
             messagebox.showinfo("Quiz Complete", f"Your score: {self.score}/{len(self.questions)}")
@@ -101,6 +115,10 @@ class QuizApp:
     def next_question(self):
         self.index += 1
         self.show_question()
+
+    def clear_window(self):
+        for widget in self.master.winfo_children():
+            widget.destroy()
 
 # Initialize the file to load
 if __name__ == "__main__":
