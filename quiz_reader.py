@@ -3,6 +3,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import random
+from PIL import Image, ImageTk
 
 # Create user defined function for loading the quiz file
 def reader(filename):
@@ -47,6 +48,10 @@ class QuizApp:
         self.index = 0
         self.score = 0
         
+        self.bg_image = Image.open("background_image.jpg")  # Use your image path
+        self.bg_photo = ImageTk.PhotoImage(self.bg_image)
+        self.bg_label = tk.Label(self.master, image=self.bg_photo)
+        self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
         self.create_welcome_screen()
 
@@ -126,7 +131,8 @@ class QuizApp:
 
     def clear_window(self):
         for widget in self.master.winfo_children():
-            widget.destroy()
+            if widget != self.bg_label:
+                widget.destroy()
 
 # Initialize the file to load
 if __name__ == "__main__":
