@@ -45,9 +45,9 @@ def quiz_game(questions):
         asked_questions.append(question)
 
         print("\n" + "=" * 50)
-        print(f"Question: {q['question']}")
+        print(f"Question: {question['question']}")
         for key in ['a', 'b', 'c', 'd']:
-            print(f"{key}) {q['options'][key]}")
+            print(f"{key}) {question['options'][key]}")
 
 
 
