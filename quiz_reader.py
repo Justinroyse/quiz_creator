@@ -109,5 +109,3 @@ if __name__ == "__main__":
         root = tk.Tk()
         app = QuizApp(root, questions)
         root.mainloop()
-
-# Finished the prototype program, pending tkinter improved version and add GUI
