@@ -57,6 +57,13 @@ def quiz_game(questions):
             else:
                 print("⚠️ Invalid choice. Please enter a, b, c, or d.")
 
+#Check if the answer is correct
+        if answer == question['correct']:
+            print("Correct!")
+            score += 1
+        else:
+            print(f"Wrong! The correct answer was: {question['correct']}) {question['options'][question['correct']]}")
 
+#Ask the user if they want to continue
 
 
