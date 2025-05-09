@@ -65,5 +65,9 @@ def quiz_game(questions):
             print(f"Wrong! The correct answer was: {question['correct']}) {question['options'][question['correct']]}")
 
 #Ask the user if they want to continue
+        continuation = input("\nDo you want to continue? (y/n): ").lower()
+        if continuation != "y":
+            break
+
 
 
