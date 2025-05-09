@@ -98,6 +98,10 @@ class QuizApp:
         self.score_label.config(text=f"Score: {self.score}")
         self.next_btn.config(state="normal")
 
+    def next_question(self):
+        self.index += 1
+        self.show_question()
+
 # Create user defined function for quiz game
 def quiz_game(questions):
     score = 0
