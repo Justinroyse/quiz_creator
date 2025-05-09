@@ -136,3 +136,5 @@ if __name__ == "__main__":
         root.title("Quiz Game")
         app = QuizApp(root, questions)
         root.mainloop()
+
+# Finished Third Working Protoype Program
