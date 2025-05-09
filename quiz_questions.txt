@@ -1,14 +1,70 @@
-Question: What is the meaning of life
-a) death
-b) rain
-c) sun
-d) moon
+Question: What is the capital city of France?
+a) Berlin
+b) Madrid
+c) Rome
+d) Paris
 Correct Answer: d
 ------------------------------
-Question: What is the color of apple
-a) red
-b) blue
-c) white
-d) yellow
-Correct Answer: a
+Question: What is the largest planet in our Solar System?
+a) Earth
+b) Mars
+c) Jupiter
+d) Saturn
+Correct Answer: c
+------------------------------
+Question: Who wrote the play "Rome and Juliet"?
+a) Charles Dickens
+b) William Shakespeare
+c) Mark Twain
+d) Leo Tolstroy
+Correct Answer: b
+------------------------------
+Question: What is the chemical Symbol for Gold?
+a) Go
+b) Gd
+c) Au
+d) Ag
+Correct Answer: c
+------------------------------
+Question: In which continent is the Sahara Desert located?
+a) Asia
+b) Africa
+c) Australia
+d) South America
+Correct Answer: b
+------------------------------
+Question: Which language is primarily spoken in Brazil?
+a) Spanish
+b) Portuguese
+c) French
+d) Italian
+Correct Answer: b
+------------------------------
+Question: How many continents are there on Earth?
+a) Five
+b) Six
+c) Seven
+d) Eight
+Correct Answer: c
+------------------------------
+Question: Who painted the Mona Lisa?
+a) Pablo Picasso
+b) Vincent Van Gogh
+c) Leonardo da Vinci
+d) Claude Monet
+Correct Answer: c
+------------------------------
+Question: What is the boiling point of water at sea level in Celcius?
+a) 90C
+b) 100C
+c) 118C
+d) 120C
+Correct Answer: b
+------------------------------
+Question: What is the capital city of Australia?
+a) Sydney
+b) Melbourne
+c) Canberra
+d) Brisbane
+Correct Answer: c
 ------------------------------
