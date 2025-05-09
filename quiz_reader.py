@@ -68,6 +68,20 @@ class QuizApp:
 
         self.show_question()
 
+    def show_question(self):
+        if self.index >= len(self.questions):
+            messagebox.showinfo("Quiz Complete", f"Your score: {self.score}/{len(self.questions)}")
+            self.master.quit()
+            return
+
+        question = self.questions[self.index]
+        self.question_label.config(text=f"Q{self.index+1}: {question['question']}")
+        for key in self.buttons:
+            self.buttons[key].config(text=f"{key}) {question['options'][key]}", state="normal")
+
+        self.feedback.config(text="")
+        self.next_btn.config(state="disabled")
+
 # Create user defined function for quiz game
 def quiz_game(questions):
     score = 0
