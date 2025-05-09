@@ -81,6 +81,22 @@ class QuizApp:
 
         self.feedback.config(text="")
         self.next_btn.config(state="disabled")
+    
+
+    def check_answer(self, selected):
+        correct = self.questions[self.index]['correct']
+        for key in self.buttons:
+            self.buttons[key].config(state="disabled")
+
+        if selected == correct:
+            self.feedback.config(text="✅ Correct!", fg="green")
+            self.score += 1
+        else:
+            correct_text = self.questions[self.index]['options'][correct]
+            self.feedback.config(text=f"❌ Wrong! Correct: {correct}) {correct_text}", fg="red")
+
+        self.score_label.config(text=f"Score: {self.score}")
+        self.next_btn.config(state="normal")
 
 # Create user defined function for quiz game
 def quiz_game(questions):
