@@ -84,3 +84,5 @@ if __name__ == "__main__":
             quiz_game(quiz_questions)
     except FileNotFoundError:
         print("⚠️ 'quiz_questions.txt' not found. Please run the Quiz Creator first.")
+
+# Finished the prototype program, pending tkinter improved version and add GUI
