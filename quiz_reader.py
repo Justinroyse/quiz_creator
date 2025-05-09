@@ -74,3 +74,13 @@ def quiz_game(questions):
     print(f"🏁 Quiz finished! Your final score: {score}/{len(asked_questions)}")
     print("Thanks for playing!")
 
+# Initialize the file to load
+if __name__ == "__main__":
+    try:
+        quiz_questions = reader("quiz_questions.txt")
+        if not quiz_questions:
+            print("⚠️ No questions found in the quiz file.")
+        else:
+            quiz_game(quiz_questions)
+    except FileNotFoundError:
+        print("⚠️ 'quiz_questions.txt' not found. Please run the Quiz Creator first.")
