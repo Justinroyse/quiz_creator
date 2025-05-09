@@ -47,26 +47,6 @@ class QuizApp:
         self.index = 0
         self.score = 0
         
-        self.question_label = tk.Label(master, text="", font=('Arial', 14), wraplength=500, justify="left")
-        self.question_label.pack(pady=20)
-
-        self.buttons = {}
-        for key in ['a', 'b', 'c', 'd']:
-            btn = tk.Button(master, text="", width=40, font=('Arial', 12),
-                            command=lambda opt=key: self.check_answer(opt))
-            btn.pack(pady=5)
-            self.buttons[key] = btn
-
-        self.feedback = tk.Label(master, text="", font=('Arial', 12, 'italic'))
-        self.feedback.pack(pady=10)
-
-        self.next_btn = tk.Button(master, text="Next", font=('Arial', 12), command=self.next_question, state="disabled")
-        self.next_btn.pack(pady=10)
-
-        self.score_label = tk.Label(master, text="Score: 0", font=('Arial', 12))
-        self.score_label.pack(pady=5)
-
-        self.show_question()
 
         self.create_welcome_screen()
 
@@ -81,6 +61,34 @@ class QuizApp:
 
         self.quit_button = tk.Button(self.master, text="Quit", font=("Arial", 14), command=self.master.quit)
         self.quit_button.pack(pady=10)
+
+    def start_quiz(self):
+        self.clear_window()
+        self.build_quiz_ui()
+        self.show_question()
+
+    def build_quiz_ui(self):
+        self.question_label = tk.Label(self.master, text="", font=('Arial', 14), wraplength=500, justify="left")
+        self.question_label.pack(pady=20)
+
+        self.buttons = {}
+        for key in ['a', 'b', 'c', 'd']:
+            btn = tk.Button(self.master, text="", width=40, font=('Arial', 12),
+                            command=lambda opt=key: self.check_answer(opt))
+            btn.pack(pady=5)
+            self.buttons[key] = btn
+
+        self.feedback = tk.Label(self.master, text="", font=('Arial', 12, 'italic'))
+        self.feedback.pack(pady=10)
+
+        self.next_btn = tk.Button(self.master, text="Next", font=('Arial', 12), command=self.next_question, state="disabled")
+        self.next_btn.pack(pady=10)
+
+        self.quit_btn = tk.Button(self.master, text="Quit", font=('Arial', 12), command=self.master.quit)
+        self.quit_btn.pack(pady=5)
+
+        self.score_label = tk.Label(self.master, text="Score: 0", font=('Arial', 12))
+        self.score_label.pack(pady=5)
 
     def show_question(self):
         if self.index >= len(self.questions):
@@ -125,5 +133,6 @@ if __name__ == "__main__":
     questions = reader("quiz_questions.txt")
     if questions:
         root = tk.Tk()
+        root.title("Quiz Game")
         app = QuizApp(root, questions)
         root.mainloop()
